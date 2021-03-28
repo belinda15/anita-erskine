@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "anita-erskine"
+  "defaultProject": "anita-erskine",
+  "cli": {
+    "analytics": "6b3c4bc8-ed2f-4314-8bc6-a1186e140b63"
+  }
 }

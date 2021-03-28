@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', serif;
+}
+
+
+@font-face {
+  font-family:  'Bodoni-Book';
+  src: url("assets/fonts/Bodoni-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family:  'Montserrat-Regular';
+  src: url("assets/fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family:  'Montserrat-Light';
+  src: url("assets/fonts/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family:  'Montserrat-MediumItalic';
+  src: url("assets/fonts/Montserrat-MediumItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family:  'Montserrat-SemiBold';
+  src: url("assets/fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family:  'Montserrat-Medium';
+  src: url("assets/fonts/Montserrat-Medium.otf") format("opentype");
+}
