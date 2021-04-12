@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  selector: 'app-portfolio',
+  templateUrl: './portfolio.component.html',
+  styleUrls: ['./portfolio.component.scss'],
   animations: [
     trigger('fadeIn', [
       transition(
@@ -28,44 +28,13 @@ import {animate, style, transition, trigger} from '@angular/animations';
     ])
   ]
 })
-export class AboutComponent implements OnInit {
+export class PortfolioComponent implements OnInit {
 
-  prev = 0;
-  next = 0;
-  index = 0;
   viewOptions = false;
   selectedTile = 0;
-  nav = 0;
-
-  images = [
-    './assets/imgs/about-img1.png',
-    './assets/imgs/about-img2.png',
-    './assets/imgs/about-img3.png',
-    './assets/imgs/about-img2.png',
-    './assets/imgs/about-img1.png',
-  ];
-
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.prev = 0;
-    this.index = 1;
-    this.next = 2;
-  }
-
-  previous(): void{
-    if(this.nav !== 0){
-      this.nav --;
-    }
-  }
-
-
-  nextImg(): void{
-    if(this.nav !== (this.images.length - 1)){
-      this.nav ++;
-    }
   }
 
   viewMenu(): void{

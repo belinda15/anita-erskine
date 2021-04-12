@@ -1,1 +1,87 @@
-<app-header></app-header>
+<div class="header view-options" [ngClass]="{'viewing': viewOptions}">
+  <div class="menu-ic">
+    <img (click)="viewMenu()" class="menu-btn" src="./assets/icons/menu.svg">
+  </div>
+  <div class="menu-options">
+    <span routerLink="/home" routerLinkActive="active" class="menu-text">HOME</span>
+    <span routerLink="/about" routerLinkActive="active" class="menu-text">ABOUT</span>
+    <span routerLink="/portfolio" routerLinkActive="active" class="menu-text">PORTFOLIO</span>
+    <span routerLink="/contact" routerLinkActive="active" class="menu-text">CONTACT</span>
+  </div>
+</div>
+
+<div class="menu-tiles" *ngIf="viewOptions" >
+  <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+    <div  (click)="selectTile(1)" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
+      <p class="tile-desc">HOME</p>
+    </div>
+    <div (click)="selectTile(2)" [ngClass]="{'selected-tile': selectedTile === 2}"  class="tile-border tile" fxFlex="34" style="cursor: pointer"  fxLayout="column" fxLayoutAlign="center center">
+      <p class="tile-desc">PORTFOLIO</p>
+      <p *ngIf="selectedTile === 2" class="subs">Tv show</p>
+      <p *ngIf="selectedTile === 2"  class="subs">Acting career</p>
+      <p *ngIf="selectedTile === 2"  class="subs">Speaking engagements </p>
+
+    </div>
+    <div (click)="selectTile(3)" [ngClass]="{'selected-tile': selectedTile === 3}"  class="tile" fxFlex="33" fxLayout="column" style="cursor: pointer"  fxLayoutAlign="center center">
+      <p class="tile-desc">CONTACT</p>
+    </div>
+  </div>
+</div>
+<div class="about-container" *ngIf="!viewOptions" [@fadeIn] [@fadeOut]>
+
+  <div fxLayout="row" class="slider-container">
+    <div (click)="previous()" fxFlex="15" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+    <div fxFlex="70">
+      <img [src]="images[nav + 1]" class="main-img">
+    </div>
+    <div (click)="nextImg()" fxFlex="15" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
+  </div>
+
+  <div class="main-content">
+    <p class="heading-1">biography </p>
+    <p class="info">
+      She’s  ranked one of the top 100 most Influential Women in Africa and one of the top 100 most Inspirational Women in Ghana and one of the most inspirational Ghanaian public figures. She is a bilingual (English and French) Strategic Communications Specialist and Broadcast Journalist, a Specialized Compère and TV Producer.
+    </p>
+
+    <p class="info">
+      Erskine has also become an ardent advocate for the Sustainable Development Goals, Girls’ Education and Women in Leadership. Since 1998, when she began her Broadcast Journalism career as a lifestyle On Air Personality, Anita has now added Strategic Communications in the Telecommunications, Food Processing, Non – Governmental Organizations, Governments and Diplomatic Mission fields to her portfolio, consequently solidifying her reputation as one of the most versatile Communications professionals from West Africa.
+    </p>
+
+    <p class="info">
+      In 2020, she joined the Africa Netpreneur Prize Initiative – Jack Ma Foundation’s flagship philanthropic entrepreneur program for African Entrepreneurs, as Host and Advisor.
+    </p>
+
+    <p class="info">
+      Anita has lent her voice and personality to numerous social impact projects, due to her unwavering belief in the SDGS mantra of not leaving anyone behind.
+    </p>
+
+    <p class="info">
+      Anita Erskine was born in Jerusalem and grew up in Ghana. She pursued her post secondary education at Trent University, Peterborough, Ontario. She is currently pursuing a Masters In Communications Management in Canada’s McMaster University.
+    </p>
+  </div>
+
+  <div fxLayout="row" class="slider-container">
+    <div (click)="previous()" fxFlex="15" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+    <div fxFlex="70">
+      <img [src]="images[nav + 1]" class="main-img">
+    </div>
+    <div (click)="nextImg()" fxFlex="15" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
+  </div>
+
+  <div class="main-content">
+    <p class="heading-1">past work images </p>
+    <p class="info">
+      She’s  ranked one of the top 100 most Influential Women in Africa and one of the top 100 most Inspirational Women in Ghana and one of the most inspirational Ghanaian public figures. She is a bilingual (English and French) Strategic Communications Specialist and Broadcast Journalist, a Specialized Compère and TV Producer.
+
+    </p>
+  </div>
+
+
+
+</div>
+
+<div class="footer-container"  *ngIf="!viewOptions" [@fadeIn] [@fadeOut]>
+  <app-footer></app-footer>
+</div>
+
+
