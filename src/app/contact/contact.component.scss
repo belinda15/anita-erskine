@@ -1,61 +1,17 @@
 
+.banner-contact{
+  width: 100%;
+}
 
 .about-container{
 
   background: #000000;
   overflow-x: hidden !important;
-  max-width: 100vw !important;
   padding-top: 8%;
   color: #ffffff;
-  padding-left: 10%;
-  padding-right: 10%;
-
-  .left-con{
-    border-right: 1px solid #ffffff;
-  }
 
 
-  .heading{
-    font-family: Montserrat-Medium, serif;
-    color: #ffffff;
-    font-size: 30px;
-    text-transform: uppercase;
-  }
 
-  .main-text{
-    font-family: Montserrat-Regular, serif;
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  .space{
-    padding-left: 20%;
-  }
-
-  .imgss{
-    width: 80%;
-    padding-bottom: 10%;
-    //margin-right: auto;
-    //margin-left: auto;
-    //display: block;
-  }
-
-  .links{
-    font-family: Montserrat-Regular, serif;
-    text-decoration: underline;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-style: italic;
-  }
-
-  .titless{
-    font-family: Montserrat-Medium, serif;
-    font-size: 18px;
-  }
-
-  .img-tiles-container{
-    padding-top: 6%;
-  }
 }
 
 .imgs-tiles{

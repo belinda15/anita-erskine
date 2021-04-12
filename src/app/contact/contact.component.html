@@ -1,0 +1,34 @@
+<div class="header view-options" [ngClass]="{'viewing': viewOptions}">
+  <div class="menu-ic">
+    <img (click)="viewMenu()" class="menu-btn" src="./assets/icons/menu.svg">
+  </div>
+  <div class="menu-options">
+    <span routerLink="/home" routerLinkActive="active" class="menu-text">HOME</span>
+    <span routerLink="/about" routerLinkActive="active" class="menu-text">ABOUT</span>
+    <span routerLink="/portfolio" routerLinkActive="active" class="menu-text">PORTFOLIO</span>
+    <span routerLink="/contact" routerLinkActive="active" class="menu-text">CONTACT</span>
+  </div>
+</div>
+<div class="menu-tiles" *ngIf="viewOptions" >
+  <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+    <div  (click)="selectTile(1)" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
+      <p class="tile-desc">HOME</p>
+    </div>
+    <div (click)="selectTile(2)" [ngClass]="{'selected-tile': selectedTile === 2}"  class="tile-border tile" fxFlex="34" style="cursor: pointer"  fxLayout="column" fxLayoutAlign="center center">
+      <p class="tile-desc">ABOUT</p>
+
+    </div>
+    <div (click)="selectTile(3)" [ngClass]="{'selected-tile': selectedTile === 3}"  class="tile" fxFlex="33" fxLayout="column" style="cursor: pointer"  fxLayoutAlign="center center">
+      <p class="tile-desc">CONTACT</p>
+    </div>
+  </div>
+</div>
+<div class="about-container" *ngIf="!viewOptions" [@fadeIn] [@fadeOut]>
+  <img src="./assets/imgs/contact-banner.png" class="banner-contact">
+  <div fxLayout="row">
+    <div fxFlex="70" class="contact-info">
+
+    </div>
+    <div fxFlex="30"></div>
+  </div>
+</div>
