@@ -19,7 +19,10 @@
 
     </div>
     <div (click)="selectTile(3)" [ngClass]="{'selected-tile': selectedTile === 3}"  class="tile" fxFlex="33" fxLayout="column" style="cursor: pointer"  fxLayoutAlign="center center">
-      <p class="tile-desc">CONTACT</p>
+      <p class="tile-desc">PORTFOLIO</p>
+      <p *ngIf="selectedTile === 3" class="subs">Tv show</p>
+      <p *ngIf="selectedTile === 3"  class="subs">Acting career</p>
+      <p *ngIf="selectedTile === 3"  class="subs">Speaking engagements </p>
     </div>
   </div>
 </div>
@@ -27,8 +30,45 @@
   <img src="./assets/imgs/contact-banner.png" class="banner-contact">
   <div fxLayout="row">
     <div fxFlex="70" class="contact-info">
+      <p class="heading">CONTACT</p>
+      <p class="heading-sub">What would you like to enquire about?</p>
 
+      <div fxLayout="row">
+        <p class="contact-topics">TV Show</p>
+        <p class="contact-topics">Acting</p>
+        <p class="contact-topics">Speaking Engagements </p>
+      </div>
+
+      <div fxLayout="row" class="form-con">
+
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+      </div>
+
+      <textarea placeholder="Message Details" [rows]="8"></textarea>
+
+      <p class="send">Send Message</p>
     </div>
-    <div fxFlex="30"></div>
+    <div fxFlex="30" class="quote-div">
+      <p class="quote">“Courage is the most important of all the virtues, because without courage you can’t practice any other virtue consistently. You can practice any virtue erratically, but nothing consistently without courage.”</p>
+      <p class="quote-user">- Maya Angelou</p>
+      <p class="tel-data">
+        Tel:<br>
+        <a href="tel: 223240000000">+223 24 000 0000</a>
+      </p>
+
+      <div fxLayout="row">
+        <p class="tel-data" fxFlex="50" >Address:<br>
+          21 Pawpaw Street,<br>
+          Accra, Ghana<br>
+          P.O Box 193</p>
+
+        <div fxLayout="row"  fxFlex="50" fxLayoutAlign="space-evenly center" >
+          <img width="25" src="./assets/icons/ig-black.svg" class="social-ic">
+          <img width="25"  src="./assets/icons/twitter-black.svg" class="social-ic">
+          <img width="15"  src="./assets/icons/fb-black.svg">
+        </div>
+      </div>
+    </div>
   </div>
 </div>

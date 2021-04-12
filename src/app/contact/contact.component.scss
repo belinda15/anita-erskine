@@ -101,6 +101,13 @@
 
 .tiles-container{
   height: inherit;
+
+  .subs{
+    font-family: Montserrat-Medium, serif;
+    font-size: 17px;
+    line-height: 0px;
+    text-transform: uppercase;
+  }
 }
 
 .tile-border{
@@ -117,3 +124,114 @@
   padding-top: 5%;
   background-color: black;
 }
+
+.contact-info{
+  padding-left: 10%;
+  padding-right: 5%;
+
+  .heading{
+    font-family: Montserrat-Light, serif;
+    font-size: 35px;
+    text-transform: uppercase;
+  }
+
+
+  .heading-sub{
+    font-family: Montserrat-Light, serif;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .contact-topics{
+    font-family: Montserrat-Light, serif;
+    color: #ffffff;
+    margin-right: 2%;
+    text-transform: capitalize;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+
+  }
+
+  input{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: Montserrat-Light, serif;
+    width: 45%;
+    background: transparent;
+    margin-right: 5%;
+    padding-bottom: 4px;
+  }
+
+  .form-con{
+    margin-top: 2%;
+    margin-bottom: 7%;
+  }
+
+  input:focus, textarea:focus{
+    outline: none;
+  }
+
+  textarea{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: Montserrat-Light, serif;
+    width: 95%;
+    resize: none;
+    background: transparent;
+    padding-bottom: 4px;
+  }
+
+  .send{
+    margin-top: 8%;
+    font-family: Montserrat-Medium, serif;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+}
+
+.quote-div{
+  background-color: #ffffff !important;
+  margin-top: -0.3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+
+  .quote{
+    font-family: Georgia-Italic, serif;
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .quote-user{
+    color: #000000;
+    font-family: Montserrat-Medium, serif;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  .tel-data{
+    padding-top: 12%;
+    color: #000000;
+    font-family: Montserrat-Regular, serif;
+    line-height: 20px;
+
+    a{
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
+}
+
+
