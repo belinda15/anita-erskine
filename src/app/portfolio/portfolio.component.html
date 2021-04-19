@@ -1,6 +1,7 @@
 <div class="header view-options" [ngClass]="{'viewing': viewOptions}">
   <div class="menu-ic">
     <img (click)="viewMenu()" class="menu-btn" src="./assets/icons/menu.svg">
+    <span class="mobile-headline">ANITA ERSKINE</span>
   </div>
   <div class="menu-options">
     <span routerLink="/home" routerLinkActive="active" class="menu-text">HOME</span>
@@ -10,7 +11,7 @@
   </div>
 </div>
 <div class="menu-tiles" *ngIf="viewOptions" >
-  <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+  <div fxLayout="row"  fxLayout.xs="column" class="tiles-container" [@fadeIn] [@fadeOut]>
     <div  (click)="selectTile(1)" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
       <p class="tile-desc">HOME</p>
     </div>
@@ -27,16 +28,16 @@
   <p class="heading">TV Show</p>
   <p class="main-text">She’s  ranked one of the top 100 most Influential Women in Africa and one of the top 100 most Inspirational Women in Ghana and one of the most inspirational Ghanaian public figures. She is a bilingual (English and French) Strategic Communications Specialist and Broadcast Journalist, a Specialized Compère and TV Producer. </p>
 
-  <div fxLayout="row" class="img-tiles-container">
+  <div fxLayout="row" fxLayout.xs="column" class="img-tiles-container">
     <div fxFlex="50" class="left-con">
       <div class="imgss">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png" class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
 
       <div class="imgss">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
@@ -44,13 +45,13 @@
     </div>
     <div fxFlex="50">
       <div class="imgss space">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
 
       <div class="imgss space">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
@@ -60,16 +61,16 @@
   <p class="heading">ACTING CAREER</p>
   <p class="main-text">She’s  ranked one of the top 100 most Influential Women in Africa and one of the top 100 most Inspirational Women in Ghana and one of the most inspirational Ghanaian public figures. She is a bilingual (English and French) Strategic Communications Specialist and Broadcast Journalist, a Specialized Compère and TV Producer. </p>
 
-  <div fxLayout="row" class="img-tiles-container">
+  <div fxLayout="row"  fxLayout.xs="column" class="img-tiles-container">
     <div fxFlex="50" class="left-con">
       <div class="imgss">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
 
       <div class="imgss">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
@@ -77,13 +78,13 @@
     </div>
     <div fxFlex="50">
       <div class="imgss space">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>
 
       <div class="imgss space">
-        <img src="./assets/imgs/about-img1.png" >
+        <img src="./assets/imgs/about-img1.png"  class="image">
         <p class="titless">NAME OF SUBJECT OF IMAGE / VIDEO</p>
         <p class="links">READ MORE</p>
       </div>

@@ -1,6 +1,7 @@
 <div class="header view-options" [ngClass]="{'viewing': viewOptions}">
   <div class="menu-ic">
     <img (click)="viewMenu()" class="menu-btn" src="./assets/icons/menu.svg">
+    <span class="mobile-headline">ANITA ERSKINE</span>
   </div>
   <div class="menu-options">
     <span routerLink="/home" routerLinkActive="active" class="menu-text">HOME</span>
@@ -10,7 +11,7 @@
   </div>
 </div>
 <div class="menu-tiles" *ngIf="viewOptions" >
-  <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+  <div fxLayout="row" fxLayout.xs="column" class="tiles-container" [@fadeIn] [@fadeOut]>
     <div  (click)="selectTile(1)" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
       <p class="tile-desc">HOME</p>
     </div>
@@ -29,17 +30,25 @@
 <div class="about-container" *ngIf="!viewOptions" [@fadeIn] [@fadeOut]>
   <img src="./assets/imgs/contact-banner.png" class="banner-contact">
   <div fxLayout="row">
-    <div fxFlex="70" class="contact-info">
+    <div fxFlex="70" fxFlex.xs="100" class="contact-info">
       <p class="heading">CONTACT</p>
       <p class="heading-sub">What would you like to enquire about?</p>
 
-      <div fxLayout="row">
-        <p class="contact-topics">TV Show</p>
-        <p class="contact-topics">Acting</p>
-        <p class="contact-topics">Speaking Engagements </p>
+      <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="10px">
+        <div fxFlex="20" fxFlex.xs="45">
+          <p class="contact-topics" >TV Show</p>
+        </div>
+
+        <div fxFlex="20" fxFlex.xs="45">
+          <p class="contact-topics">Acting</p>
+        </div>
+
+        <div fxFlex="40" fxFlex.xs="90">
+          <p class="contact-topics">Speaking Engagements </p>
+        </div>
       </div>
 
-      <div fxLayout="row" class="form-con">
+      <div fxLayout="row" fxLayout.xs="column" class="form-con">
 
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Your Email">

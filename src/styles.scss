@@ -74,3 +74,53 @@ p:focus{
 span:focus{
   outline: none;
 }
+
+
+.menu-btn{
+
+  @media screen and (max-width: 600px) {
+    width: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+
+.menu-tiles{
+
+  @media screen and (max-width: 600px) {
+    height: 100vh !important;
+    background-image: unset !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+  }
+}
+
+
+.tile-border{
+
+  @media screen and (max-width: 600px) {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.menu-options{
+  @media screen and (max-width: 600px) {
+    display: none !important;
+  }
+
+}
+
+
+.mobile-headline{
+
+  display: none;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+    color: white;
+    font-size: 30px;
+    margin-left: 35px;
+    font-family: Bodoni-Book, serif;
+    padding-top: 5px;
+  }
+}

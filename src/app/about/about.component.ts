@@ -63,7 +63,7 @@ export class AboutComponent implements OnInit {
 
 
   nextImg(): void{
-    if(this.nav !== (this.images.length - 1)){
+    if(this.nav < (this.images.length - 3)){
       this.nav ++;
     }
   }

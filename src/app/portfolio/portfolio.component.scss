@@ -12,6 +12,10 @@
 
   .left-con{
     border-right: 1px solid #ffffff;
+
+    @media screen and (max-width: 600px) {
+      border-right: none;
+    }
   }
 
 
@@ -30,6 +34,16 @@
 
   .space{
     padding-left: 20%;
+
+    @media screen and (max-width: 600px) {
+      padding-left: unset;
+    }
+  }
+
+  .image{
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .imgss{
@@ -38,6 +52,10 @@
     //margin-right: auto;
     //margin-left: auto;
     //display: block;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .links{
@@ -97,6 +115,11 @@
 }
 
 .menu-ic{
+
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+  }
 
   .menu-btn{
     cursor: pointer;

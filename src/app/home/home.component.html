@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="menu-tiles" *ngIf="viewOptions" >
-        <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+        <div fxLayout="row" fxLayout.xs="column" class="tiles-container" [@fadeIn] [@fadeOut]>
           <div  (click)="selectTile(1)" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
             <p class="tile-desc">ABOUT</p>
           </div>
@@ -39,7 +39,7 @@
          Award-Winning Media Mastermind armed with a rich and powerful appreciation for
          Africa, its legacy, stories, heritage and promise.
        </p>
-       <button class="discover-btn">DISCOVER</button>
+       <button routerLink="/about" class="discover-btn">DISCOVER</button>
      </div>
     </div>
   </div>

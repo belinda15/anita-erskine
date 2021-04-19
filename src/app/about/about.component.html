@@ -1,6 +1,7 @@
 <div class="header view-options" [ngClass]="{'viewing': viewOptions}">
   <div class="menu-ic">
     <img (click)="viewMenu()" class="menu-btn" src="./assets/icons/menu.svg">
+    <span class="mobile-headline">ANITA ERSKINE</span>
   </div>
   <div class="menu-options">
     <span routerLink="/home" routerLinkActive="active" class="menu-text">HOME</span>
@@ -11,12 +12,12 @@
 </div>
 
 <div class="menu-tiles" *ngIf="viewOptions" >
-  <div fxLayout="row" class="tiles-container" [@fadeIn] [@fadeOut]>
+  <div fxLayout="row" fxLayout.xs="column"  class="tiles-container" [@fadeIn] [@fadeOut]>
     <div  (click)="selectTile(1)" routerLink="/home" [ngClass]="{'selected-tile': selectedTile === 1}" fxFlex="33" style="cursor: pointer" class="tile-border tile" fxLayout="column" fxLayoutAlign="center center">
       <p class="tile-desc">HOME</p>
     </div>
     <div (click)="selectTile(2)" [ngClass]="{'selected-tile': selectedTile === 2}"  class="tile-border tile" fxFlex="34" style="cursor: pointer"  fxLayout="column" fxLayoutAlign="center center">
-      <p class="tile-desc">PORTFOLIO</p>
+      <p class="tile-desc" routerLink="/portfolio" >PORTFOLIO</p>
       <p *ngIf="selectedTile === 2" class="subs">Tv show</p>
       <p *ngIf="selectedTile === 2"  class="subs">Acting career</p>
       <p *ngIf="selectedTile === 2"  class="subs">Speaking engagements </p>
@@ -29,12 +30,14 @@
 </div>
 <div class="about-container" *ngIf="!viewOptions" [@fadeIn] [@fadeOut]>
 
-  <div fxLayout="row" class="slider-container">
-    <div (click)="previous()" fxFlex="15" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+  <div fxLayout="row"  class="slider-container">
+    <div (click)="previous()" fxFlex="15" fxFlex.xs="14" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+    <div fxFlex.xs="1"></div>
     <div fxFlex="70">
       <img [src]="images[nav + 1]" class="main-img">
     </div>
-    <div (click)="nextImg()" fxFlex="15" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
+    <div fxFlex.xs="1"></div>
+    <div (click)="nextImg()"  fxFlex="15" fxFlex.xs="14" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
   </div>
 
   <div class="main-content">
@@ -61,11 +64,13 @@
   </div>
 
   <div fxLayout="row" class="slider-container">
-    <div (click)="previous()" fxFlex="15" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+    <div (click)="previous()" fxFlex="15" fxFlex.xs="14" class="right-container" [ngStyle]="{'background-image': 'url(' + images[nav] + ')'}"></div>
+    <div fxFlex.xs="1"></div>
     <div fxFlex="70">
       <img [src]="images[nav + 1]" class="main-img">
     </div>
-    <div (click)="nextImg()" fxFlex="15" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
+    <div fxFlex.xs="1"></div>
+    <div (click)="nextImg()" fxFlex="15" fxFlex.xs="14" class="left-container" [ngStyle]="{'background-image': 'url(' + images[nav + 2] + ')'}"></div>
   </div>
 
   <div class="main-content">
